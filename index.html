@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nazneen Holidays — Honeymoon & Travel Bookings, Bangalore</title>
+  <meta name="description" content="Nazneen Holidays in Bangalore plans honeymoons, hotel and room bookings, air ticketing, visa help and travel allowances. Call +91 94441 55515." />
+  <meta property="og:title" content="Nazneen Holidays — Honeymoon & Travel Bookings, Bangalore" />
+  <meta property="og:description" content="Honeymoon packages, hotel bookings and complete travel assistance from our Bangalore travel desk." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0d7377;
+      --primary-dark: #095c5f;
+      --accent: #14b8a6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e5e7eb;
+      --radius: 6px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    .topbar {
+      background: #064e4b;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.85rem;
+      padding: 0.6rem 0;
+    }
+    .topbar .container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+    .topbar a { color: rgba(255,255,255,0.9); }
+    .topbar a:hover { color: #fff; }
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); letter-spacing: -0.02em; }
+    .logo span { display: block; font-size: 0.7rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    nav { display: flex; gap: 1.75rem; font-size: 0.95rem; font-weight: 500; }
+    nav a { color: var(--text); }
+    nav a:hover, nav a.active { color: var(--primary); }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--primary-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+    .hero {
+      background: linear-gradient(135deg, #064e4b 0%, #0d7377 100%);
+      color: #fff;
+      padding: 5rem 0 4.5rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 1rem; }
+    .hero p { font-size: 1.05rem; max-width: 640px; margin: 0 auto 2rem; opacity: 0.9; }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .section { padding: 4rem 0; }
+    .section.alt { background: var(--surface); }
+    .section-title { text-align: center; margin-bottom: 2.5rem; }
+    .section-title p { color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 0.5rem; }
+    .section-title h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0; }
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.06); transform: translateY(-3px); }
+    .card-icon {
+      width: 44px; height: 44px;
+      background: rgba(20,184,166,0.12);
+      color: var(--primary);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .why-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+    .why-list li { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.95rem; }
+    .why-list li::before {
+      content: "✓";
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+    }
+    .banner {
+      background: var(--primary);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .banner h2 { margin: 0 0 0.75rem; font-size: 1.75rem; }
+    .banner p { margin: 0 0 1.5rem; opacity: 0.9; }
+    footer { background: #0f2e2d; color: rgba(255,255,255,0.75); padding: 2.5rem 0 1.5rem; font-size: 0.9rem; }
+    footer .container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
+    footer h4 { color: #fff; margin: 0 0 0.75rem; font-size: 1rem; }
+    footer p, footer a { color: rgba(255,255,255,0.7); margin: 0.25rem 0; }
+    footer a:hover { color: #fff; }
+    .copyright { text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.55); }
+    @media (max-width: 640px) {
+      nav { gap: 1rem; font-size: 0.9rem; }
+      .hero { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>18/1, Commercial Street, Shivajinagar, Bangalore — 560001</span>
+      <span><a href="tel:+919444155515">+91 94441 55515</a> · <a href="mailto:info@nazneenholidays.in">info@nazneenholidays.in</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">Nazneen Holidays<span>Honeymoon & Travel Desk</span></div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Honeymoons, holidays & hotel bookings — planned in Bangalore.</h1>
+      <p>We arrange stays, flights, visas and travel allowances so your trip feels effortless from the first call.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn">Plan my trip</a>
+        <a href="tel:+919444155515" class="btn btn-outline">Call +91 94441 55515</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <p>What we do</p>
+        <h2>Everything your journey needs</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon">♥</div>
+          <h3>Honeymoon Packages</h3>
+          <p>Romantic getaways to Coorg, Ooty, Kerala, Goa and the Maldives with stays and transfers arranged.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🏨</div>
+          <h3>Hotel & Room Booking</h3>
+          <p>Budget rooms to boutique suites across Bangalore and beyond, confirmed the same day.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">✈</div>
+          <h3>Air Ticketing</h3>
+          <p>Domestic and international flight tickets, reschedules and group fares handled for you.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛂</div>
+          <h3>Passport & Visa Help</h3>
+          <p>Document checks, appointment booking and filing support for families and groups.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💱</div>
+          <h3>Travel Allowance & Forex</h3>
+          <p>Guidance on travel budgets, forex cards and currency for a hassle-free trip.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚌</div>
+          <h3>Group & Corporate Tours</h3>
+          <p>Transport, stays and coordination for family trips, weddings and company outings.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-title">
+        <p>Where we send you</p>
+        <h2>Popular getaways from Bangalore</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card" style="padding:0;overflow:hidden;">
+          <img src="images/loc-coorg.jpg" alt="Misty coffee hills of Coorg" width="1200" height="800" loading="lazy" style="height:190px;object-fit:cover;width:100%;" />
+          <div style="padding:1.5rem;">
+            <h3>Coorg &amp; Chikmagalur</h3>
+            <p>Coffee estates, misty hills and quiet homestays — a short drive from Bangalore.</p>
+          </div>
+        </article>
+        <article class="card" style="padding:0;overflow:hidden;">
+          <img src="images/loc-goa.jpg" alt="Palm-lined beach in Goa" width="1200" height="800" loading="lazy" style="height:190px;object-fit:cover;width:100%;" />
+          <div style="padding:1.5rem;">
+            <h3>Goa</h3>
+            <p>Beach stays, north–south sightseeing and easy flights or overnight coaches.</p>
+          </div>
+        </article>
+        <article class="card" style="padding:0;overflow:hidden;">
+          <img src="images/loc-kerala.jpg" alt="Houseboat on the Kerala backwaters" width="1200" height="800" loading="lazy" style="height:190px;object-fit:cover;width:100%;" />
+          <div style="padding:1.5rem;">
+            <h3>Kerala</h3>
+            <p>Munnar, Alleppey houseboats and Kochi, planned as one smooth circuit.</p>
+          </div>
+        </article>
+      </div>
+      <div class="card" style="margin-top:1.5rem;">
+        <h3 style="margin-top:0;">Other locations we plan</h3>
+        <p>Ooty · Mysore · Wayanad · Hampi · Gokarna · Andaman · Kashmir · Dubai · Maldives · Bali · Singapore · Thailand</p>
+        <a href="contact.html" class="btn" style="margin-top:1rem;">Ask for an itinerary</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;">
+        <div>
+          <p style="color:var(--primary);font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 0.5rem;">Why Nazneen Holidays</p>
+          <h2 style="margin:0 0 1rem;">Honest service, personal attention</h2>
+          <p style="color:var(--muted);margin:0 0 1rem;">We are a Bangalore-based travel desk that treats every trip like our own. You get one point of contact, clear options and support on WhatsApp while you travel.</p>
+          <ul class="why-list">
+            <li>Same-day hotel and flight confirmations</li>
+            <li>Flexible itineraries built around your dates</li>
+            <li>WhatsApp support during your trip</li>
+            <li>Help with travel allowance, visa and documents</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/loc-ooty.jpg" alt="Tea gardens and blue mountains near Ooty" width="1600" height="900" loading="lazy" style="border-radius:var(--radius);height:100%;object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner">
+    <div class="container">
+      <h2>Ready to plan your next trip?</h2>
+      <p>Call or WhatsApp us and we will suggest the best stay, route and travel options.</p>
+      <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.6);">Send an enquiry</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h4>Nazneen Holidays</h4>
+        <p>Honeymoon packages, hotel bookings and travel assistance from Bangalore.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+919444155515">+91 94441 55515</a></p>
+        <p><a href="mailto:info@nazneenholidays.in">info@nazneenholidays.in</a></p>
+        <p>18/1, Commercial Street, Shivajinagar,<br />Bangalore — 560001</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon — Sat: 10:00 AM — 8:00 PM</p>
+        <p>Sunday: 11:00 AM — 5:00 PM</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Nazneen Holidays. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
